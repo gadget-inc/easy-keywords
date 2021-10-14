@@ -43,6 +43,6 @@ const keywords = await extractKeywords("the t-shirt is green and nice and soft, 
 
 ## Algorithm
 
-`easy-keywords` uses TF/IDF to determine term salience, which is a fancy way of saying that terms that occur more frequently in the input text are assumed to be more important. After normalizing each term and identifying which terms have high TF/IDF scores, we filter down to only nouns and verbs to try to get a bit better signal-to-noise.
+`easy-keywords` uses the `wordnet-db` to filter down the input string to just nouns and verbs, and then uses TF/IDF to determine term salience, which is a fancy way of saying that terms that occur more frequently in the input text are assumed to be more important. After normalizing each term and identifying which terms have high TF/IDF scores, we filter down to only nouns and verbs to try to get a bit better signal-to-noise.
 
 TF/IDF is the same algorithm that underlies Lucene's and Elasticsearch's idea of search salience and is a good starting point. If you want higher salience, you could put your entire corpus of documents into a search system and use TF/IDF over the whole corpus. This is currently out of scope for `easy-keywords` but PRs are welcome!
