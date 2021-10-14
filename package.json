@@ -9,6 +9,7 @@
     "Readme.md",
     "dist/**/*"
   ],
+  "repository": "gadgetinc/easy-keywords",
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.4",
